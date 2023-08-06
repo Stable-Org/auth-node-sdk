@@ -12,41 +12,41 @@
 
 import { RequestFile } from './models';
 
-export class LoginUserRequestDto {
+export class UnauthorizedResponseDto {
     /**
-    * The email of the user
+    * HTTP status code of the error
     */
-    'email': string;
+    'statusCode': number;
     /**
-    * The password of the user (minimum 8 characters)
+    * Short description of the error
     */
-    'password': string;
+    'message': string;
     /**
-    * The new password to set for the user (optional, minimum 8 characters)
+    * Error type
     */
-    'newPassword'?: string;
+    'error': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "email",
-            "baseName": "email",
+            "name": "statusCode",
+            "baseName": "statusCode",
+            "type": "number"
+        },
+        {
+            "name": "message",
+            "baseName": "message",
             "type": "string"
         },
         {
-            "name": "password",
-            "baseName": "password",
-            "type": "string"
-        },
-        {
-            "name": "newPassword",
-            "baseName": "newPassword",
+            "name": "error",
+            "baseName": "error",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return LoginUserRequestDto.attributeTypeMap;
+        return UnauthorizedResponseDto.attributeTypeMap;
     }
 }
 

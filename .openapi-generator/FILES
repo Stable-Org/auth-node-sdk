@@ -1,10 +1,12 @@
 .gitignore
-.openapi-generator-ignore
 api.ts
 api/apis.ts
 api/authApi.ts
 git_push.sh
+model/badRequestResponseDto.ts
 model/loginUserRequestDto.ts
+model/loginUserResponseDto.ts
 model/models.ts
+model/unauthorizedResponseDto.ts
 package.json
 tsconfig.json

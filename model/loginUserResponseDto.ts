@@ -12,41 +12,41 @@
 
 import { RequestFile } from './models';
 
-export class LoginUserRequestDto {
+export class LoginUserResponseDto {
     /**
-    * The email of the user
+    * The ID token for the user
     */
-    'email': string;
+    'idToken': string;
     /**
-    * The password of the user (minimum 8 characters)
+    * The access token for the user
     */
-    'password': string;
+    'accessToken': string;
     /**
-    * The new password to set for the user (optional, minimum 8 characters)
+    * The refresh token for the user
     */
-    'newPassword'?: string;
+    'refreshToken': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "email",
-            "baseName": "email",
+            "name": "idToken",
+            "baseName": "idToken",
             "type": "string"
         },
         {
-            "name": "password",
-            "baseName": "password",
+            "name": "accessToken",
+            "baseName": "accessToken",
             "type": "string"
         },
         {
-            "name": "newPassword",
-            "baseName": "newPassword",
+            "name": "refreshToken",
+            "baseName": "refreshToken",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return LoginUserRequestDto.attributeTypeMap;
+        return LoginUserResponseDto.attributeTypeMap;
     }
 }
 
