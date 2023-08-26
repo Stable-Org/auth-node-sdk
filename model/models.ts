@@ -2,7 +2,9 @@ import localVarRequest from 'request';
 
 export * from './acceptedResponseDto';
 export * from './badRequestResponseDto';
+export * from './confirmForgotPasswordRequestDto';
 export * from './confirmRequestDto';
+export * from './forgotPasswordRequestDto';
 export * from './loginRequestDto';
 export * from './loginResponseDto';
 export * from './refreshTokenRequestDto';
@@ -25,7 +27,9 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { AcceptedResponseDto } from './acceptedResponseDto';
 import { BadRequestResponseDto } from './badRequestResponseDto';
+import { ConfirmForgotPasswordRequestDto } from './confirmForgotPasswordRequestDto';
 import { ConfirmRequestDto } from './confirmRequestDto';
+import { ForgotPasswordRequestDto } from './forgotPasswordRequestDto';
 import { LoginRequestDto } from './loginRequestDto';
 import { LoginResponseDto } from './loginResponseDto';
 import { RefreshTokenRequestDto } from './refreshTokenRequestDto';
@@ -52,7 +56,9 @@ let enumsMap: {[index: string]: any} = {
 let typeMap: {[index: string]: any} = {
     "AcceptedResponseDto": AcceptedResponseDto,
     "BadRequestResponseDto": BadRequestResponseDto,
+    "ConfirmForgotPasswordRequestDto": ConfirmForgotPasswordRequestDto,
     "ConfirmRequestDto": ConfirmRequestDto,
+    "ForgotPasswordRequestDto": ForgotPasswordRequestDto,
     "LoginRequestDto": LoginRequestDto,
     "LoginResponseDto": LoginResponseDto,
     "RefreshTokenRequestDto": RefreshTokenRequestDto,

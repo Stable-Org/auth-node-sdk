@@ -12,23 +12,23 @@
 
 import { RequestFile } from './models';
 
-export class AcceptedResponseDto {
+export class ForgotPasswordRequestDto {
     /**
-    * An informational message
+    * The email of the user
     */
-    'message': string;
+    'email': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "message",
-            "baseName": "message",
+            "name": "email",
+            "baseName": "email",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return AcceptedResponseDto.attributeTypeMap;
+        return ForgotPasswordRequestDto.attributeTypeMap;
     }
 }
 
