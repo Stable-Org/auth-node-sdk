@@ -12,41 +12,23 @@
 
 import { RequestFile } from './models';
 
-export class UnauthorizedResponseDto {
+export class AcceptedResponseDto {
     /**
-    * HTTP status code of the error
-    */
-    'statusCode': number;
-    /**
-    * Short description of the error
+    * An informational message
     */
     'message': string;
-    /**
-    * Error type
-    */
-    'error': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "statusCode",
-            "baseName": "statusCode",
-            "type": "number"
-        },
-        {
             "name": "message",
             "baseName": "message",
-            "type": "string"
-        },
-        {
-            "name": "error",
-            "baseName": "error",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return UnauthorizedResponseDto.attributeTypeMap;
+        return AcceptedResponseDto.attributeTypeMap;
     }
 }
 

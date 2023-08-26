@@ -1,10 +1,10 @@
 {
     "name": "@stable-org/auth-node-sdk",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "NodeJS client for @stable-org/auth-node-sdk",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Stable-Org/auth-node-sdk.git"
+        "url": "https://github.com/stable-org/auth-node-sdk.git"
     },
     "main": "dist/api.js",
     "types": "dist/api.d.ts",

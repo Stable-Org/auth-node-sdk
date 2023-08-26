@@ -1,8 +1,13 @@
 import localVarRequest from 'request';
 
+export * from './acceptedResponseDto';
 export * from './badRequestResponseDto';
-export * from './loginUserRequestDto';
-export * from './loginUserResponseDto';
+export * from './confirmRequestDto';
+export * from './loginRequestDto';
+export * from './loginResponseDto';
+export * from './refreshTokenRequestDto';
+export * from './refreshTokenResponseDto';
+export * from './registerRequestDto';
 export * from './unauthorizedResponseDto';
 
 import * as fs from 'fs';
@@ -18,9 +23,14 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
+import { AcceptedResponseDto } from './acceptedResponseDto';
 import { BadRequestResponseDto } from './badRequestResponseDto';
-import { LoginUserRequestDto } from './loginUserRequestDto';
-import { LoginUserResponseDto } from './loginUserResponseDto';
+import { ConfirmRequestDto } from './confirmRequestDto';
+import { LoginRequestDto } from './loginRequestDto';
+import { LoginResponseDto } from './loginResponseDto';
+import { RefreshTokenRequestDto } from './refreshTokenRequestDto';
+import { RefreshTokenResponseDto } from './refreshTokenResponseDto';
+import { RegisterRequestDto } from './registerRequestDto';
 import { UnauthorizedResponseDto } from './unauthorizedResponseDto';
 
 /* tslint:disable:no-unused-variable */
@@ -36,12 +46,18 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "RegisterRequestDto.GenderEnum": RegisterRequestDto.GenderEnum,
 }
 
 let typeMap: {[index: string]: any} = {
+    "AcceptedResponseDto": AcceptedResponseDto,
     "BadRequestResponseDto": BadRequestResponseDto,
-    "LoginUserRequestDto": LoginUserRequestDto,
-    "LoginUserResponseDto": LoginUserResponseDto,
+    "ConfirmRequestDto": ConfirmRequestDto,
+    "LoginRequestDto": LoginRequestDto,
+    "LoginResponseDto": LoginResponseDto,
+    "RefreshTokenRequestDto": RefreshTokenRequestDto,
+    "RefreshTokenResponseDto": RefreshTokenResponseDto,
+    "RegisterRequestDto": RegisterRequestDto,
     "UnauthorizedResponseDto": UnauthorizedResponseDto,
 }
 

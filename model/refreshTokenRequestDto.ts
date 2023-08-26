@@ -12,41 +12,23 @@
 
 import { RequestFile } from './models';
 
-export class UnauthorizedResponseDto {
+export class RefreshTokenRequestDto {
     /**
-    * HTTP status code of the error
+    * The refresh token to be used for generating new tokens.
     */
-    'statusCode': number;
-    /**
-    * Short description of the error
-    */
-    'message': string;
-    /**
-    * Error type
-    */
-    'error': string;
+    'refreshToken': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "statusCode",
-            "baseName": "statusCode",
-            "type": "number"
-        },
-        {
-            "name": "message",
-            "baseName": "message",
-            "type": "string"
-        },
-        {
-            "name": "error",
-            "baseName": "error",
+            "name": "refreshToken",
+            "baseName": "refreshToken",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return UnauthorizedResponseDto.attributeTypeMap;
+        return RefreshTokenRequestDto.attributeTypeMap;
     }
 }
 
